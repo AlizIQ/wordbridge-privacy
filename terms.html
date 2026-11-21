@@ -1,63 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>WordBridge - Terms of Service</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — WordBridge</title>
   <style>
-    body { font-family: -apple-system, Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #222; }
-    h1 { font-size: 1.6em; }
-    h2 { font-size: 1.2em; margin-top: 1.5em; }
-    p, li { font-size: 0.95em; }
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --note-border: #fde68a;
+      --note-bg: #fffbeb;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1120;
+        --card: #111827;
+        --text: #f1f5f9;
+        --muted: #94a3b8;
+        --border: #1e293b;
+        --accent: #60a5fa;
+        --accent-soft: #172554;
+        --note-border: #78350f;
+        --note-bg: #271b0c;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 12px auto 32px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 22px;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+    }
+
+    @media (min-width: 640px) {
+      body {
+        padding: 32px 24px;
+      }
+      main {
+        padding: 40px 44px;
+      }
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 1.75rem;
+      line-height: 1.25;
+    }
+
+    .meta {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    h2 {
+      margin: 28px 0 10px;
+      font-size: 1.2rem;
+      line-height: 1.35;
+      scroll-margin-top: 20px;
+    }
+
+    p {
+      margin: 0 0 12px;
+      color: var(--text);
+    }
+
+    ul {
+      margin: 8px 0 14px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-word;
+    }
+
+    .callout {
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin: 14px 0;
+      font-size: 0.95rem;
+    }
+
+    .note-box {
+      background: var(--note-bg);
+      border: 1px solid var(--note-border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin: 14px 0;
+      font-size: 0.95rem;
+    }
+
+    .callout p:last-child,
+    .note-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      margin-top: 32px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      font-size: 0.88rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px 16px;
+    }
   </style>
 </head>
 <body>
-  <h1>Terms of Service for WordBridge</h1>
-  <p><em>Last updated: August 23, 2026</em></p>
+  <main>
+    <header>
+      <span class="badge">WordBridge by AlizIQ</span>
+      <h1>Terms of Service for WordBridge</h1>
+      <p class="meta">Last updated: November 20, 2026</p>
+    </header>
 
-  <p>By downloading or using WordBridge ("the app"), you agree to these Terms of Service. If you do not agree, please do not use the app.</p>
+    <p>
+      By downloading, accessing, or using WordBridge ("the app"), developed by <strong>AlizIQ</strong> ("we", "our", "us"),
+      you agree to be bound by these Terms of Service ("Terms") and our
+      <a href="privacy.html">Privacy Policy</a>. If you do not agree, please do not use the app.
+    </p>
 
-  <h2>1. Description of Service</h2>
-  <p>WordBridge is a vocabulary learning app offering word translations, quizzes, audio pronunciation, and a leaderboard across 14 languages.</p>
+    <h2>1. Description of Service</h2>
+    <p>
+      WordBridge is a language learning application offering vocabulary translations, audio pronunciation, sentence
+      formulas, quizzes, Smart Review (spaced repetition), 1v1 battles, and leaderboards across 15 supported languages.
+    </p>
 
-  <h2>2. Accounts</h2>
-  <p>Some features (leaderboard, purchases, saved progress) require signing in with a Google account. You are responsible for maintaining the security of your account.</p>
+    <h2>2. Accounts</h2>
+    <p>
+      You may use core learning features without creating an account. Certain features—such as cloud progress sync,
+      leaderboard ranking, referrals, promotional redemptions, and cross-device purchase restoration—require signing
+      in with a Google account. You are responsible for maintaining the security of your account and device.
+    </p>
 
-  <h2>3. Free and Premium Access</h2>
-  <ul>
-    <li>The app offers free access to a limited word library and full access to all features.</li>
-    <li>Premium access unlocks the full word library and can be purchased as a 1-year pass (RM19.90) or a lifetime pass (RM199), processed through Google Play Billing.</li>
-    <li>Free Premium Weekends may be offered periodically (e.g. Saturdays and Sundays) at our discretion and may be changed or discontinued at any time.</li>
-  </ul>
+    <h2>3. Free Access, Premium Plans, and Promotions</h2>
+    <ul>
+      <li>
+        <strong>Free Tier:</strong> WordBridge provides free access to core learning tools and an introductory
+        vocabulary library.
+      </li>
+      <li>
+        <strong>Premium Access:</strong> Premium unlocks the complete word library and expanded learning benefits.
+        Available options include a recurring <strong>Yearly Pass</strong> subscription and a one-time
+        <strong>Lifetime Pass</strong>, processed through Google Play Billing. Current prices (including any
+        early-bird or promotional pricing) are displayed in your local currency inside the app and on Google Play
+        before purchase.
+      </li>
+      <li>
+        <strong>Lifetime Pass Scope:</strong> "Lifetime" access is a one-time purchase with no recurring charges and
+        remains valid for the operational lifetime of the WordBridge app and service.
+      </li>
+      <li>
+        <strong>Promotions, Free Weekends, and Referrals:</strong> Free Premium Weekends, launch promo codes, and
+        referral rewards are offered at our discretion, have no cash value, are non-transferable, and may be modified,
+        limited, or discontinued at any time.
+      </li>
+    </ul>
 
-  <h2>4. Payments and Refunds</h2>
-  <p>All payments are processed through Google Play Billing and are subject to Google Play's refund policies. WordBridge does not directly process or store your payment information.</p>
+    <h2>4. Payments and Refunds</h2>
+    <p>
+      All purchases and subscriptions are billed and processed exclusively through <strong>Google Play Billing</strong>
+      and are subject to Google Play's payment and refund policies. AlizIQ does not directly process or store your
+      payment card details.
+    </p>
 
-  <h2>5. Subscription Renewal and Cancellation</h2>
-  <p>The 1-year Premium pass automatically renews unless cancelled before the renewal date. You can manage or cancel your subscription through your Google Play account settings at any time.</p>
+    <h2>5. Subscription Renewal and Cancellation</h2>
+    <p>
+      The Yearly Pass subscription automatically renews each year via Google Play unless canceled at least
+      <strong>24 hours before the renewal date</strong>. You can manage or cancel your subscription at any time in
+      <strong>Google Play → Payments &amp; subscriptions → Subscriptions</strong>.
+    </p>
+    <div class="note-box">
+      <p>
+        <strong>Important:</strong> Uninstalling WordBridge or deleting your WordBridge account does
+        <strong>not</strong> automatically cancel an active Google Play subscription. Please cancel directly in
+        Google Play Subscriptions if you no longer wish to be billed.
+      </p>
+    </div>
 
-  <h2>6. Acceptable Use</h2>
-  <p>You agree not to: attempt to manipulate leaderboard scores, exploit bugs to gain unauthorized premium access, reverse-engineer the app, or use the app for any unlawful purpose.</p>
+    <h2>6. Acceptable Use</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Manipulate leaderboard scores, streaks, or 1v1 battle results through automated tools or unfair means.</li>
+      <li>Abuse referral programs, promo codes, or create fake/duplicate accounts to claim unauthorized rewards.</li>
+      <li>Exploit bugs, bypass paywalls, or attempt to reverse-engineer, decompile, or tamper with the app.</li>
+      <li>Use the app for any unlawful, abusive, or harmful purpose.</li>
+    </ul>
 
-  <h2>7. Leaderboard Conduct</h2>
-  <p>We reserve the right to remove leaderboard entries or restrict accounts found to be using unfair means to inflate scores.</p>
+    <h2>7. Leaderboard and Fair Play</h2>
+    <p>
+      We reserve the right to remove leaderboard entries, revoke fraudulently obtained promotional/referral rewards,
+      or restrict accounts found to be violating fair play rules.
+    </p>
 
-  <h2>8. Content Accuracy</h2>
-  <p>While we strive for translation accuracy, WordBridge is a learning tool and translations may occasionally contain errors. We encourage users to verify critical translations independently.</p>
+    <h2>8. Intellectual Property</h2>
+    <p>
+      All app design, software code, branding, layout, and curated learning materials in WordBridge are owned by
+      <strong>AlizIQ</strong> (or its respective licensors) and are protected by applicable intellectual property laws.
+      We grant you a limited, non-exclusive, non-transferable license to use the app for personal, non-commercial
+      learning purposes.
+    </p>
 
-  <h2>9. Account Termination</h2>
-  <p>You may delete your account at any time through the app's Settings. We reserve the right to suspend or terminate accounts that violate these Terms.</p>
+    <h2>9. Content Accuracy</h2>
+    <p>
+      While we strive for high translation and pronunciation accuracy, WordBridge is an educational tool and occasional
+      errors or regional variations may occur. Please verify critical, legal, medical, or professional translations
+      independently.
+    </p>
 
-  <h2>10. Changes to the App</h2>
-  <p>Features, pricing, and content may be added, changed, or removed at any time as the app develops.</p>
+    <h2>10. Account Deletion and Termination</h2>
+    <p>
+      You may permanently delete your account and associated cloud data at any time inside WordBridge via
+      <strong>Profile → Delete Account</strong>, or by following the instructions on our
+      <a href="privacy.html#account-deletion">Account Deletion page</a>. We also reserve the right to suspend or
+      terminate accounts that violate these Terms.
+    </p>
 
-  <h2>11. Limitation of Liability</h2>
-  <p>WordBridge is provided "as is" without warranties of any kind. We are not liable for any indirect or incidental damages arising from use of the app.</p>
+    <h2>11. Changes to the App</h2>
+    <p>
+      We continually improve WordBridge. Features, supported languages, pricing tiers, and content may be added,
+      updated, or removed at any time as the app evolves.
+    </p>
 
-  <h2>12. Changes to These Terms</h2>
-  <p>We may update these Terms from time to time. Continued use of the app after changes means you accept the updated Terms.</p>
+    <h2>12. Limitation of Liability</h2>
+    <p>
+      WordBridge is provided "as is" and "as available" without warranties of any kind, express or implied. To the
+      maximum extent permitted by law, AlizIQ shall not be liable for any indirect, incidental, special, or
+      consequential damages arising from your use of or inability to use the app.
+    </p>
 
-  <h2>13. Contact</h2>
-  <p>Questions about these Terms can be sent to: <strong>alizainalaza345@gmail.com</strong></p>
+    <h2>13. Changes to These Terms</h2>
+    <p>
+      We may update these Terms from time to time. The updated version will be indicated by the "Last updated" date
+      at the top of this page. Continued use of the app after changes take effect means you accept the updated Terms.
+    </p>
+
+    <h2>14. Contact Us</h2>
+    <div class="callout">
+      <p>
+        If you have any questions about these Terms of Service, please contact <strong>AlizIQ</strong> at:<br />
+        Email: <a href="mailto:alizainalaza345@gmail.com">alizainalaza345@gmail.com</a>
+      </p>
+    </div>
+
+    <footer>
+      <span>© 2026 AlizIQ — WordBridge</span>
+      <span><a href="privacy.html">Privacy Policy</a></span>
+    </footer>
+  </main>
 </body>
 </html>
