@@ -1,53 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>WordBridge - Privacy Policy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — WordBridge</title>
   <style>
-    body { font-family: -apple-system, Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #222; }
-    h1 { font-size: 1.6em; }
-    h2 { font-size: 1.2em; margin-top: 1.5em; }
-    p, li { font-size: 0.95em; }
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --danger-border: #fecaca;
+      --danger-bg: #fef2f2;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1120;
+        --card: #111827;
+        --text: #f1f5f9;
+        --muted: #94a3b8;
+        --border: #1e293b;
+        --accent: #60a5fa;
+        --accent-soft: #172554;
+        --danger-border: #7f1d1d;
+        --danger-bg: #2a1215;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 12px auto 32px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 22px;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+    }
+
+    @media (min-width: 640px) {
+      body {
+        padding: 32px 24px;
+      }
+      main {
+        padding: 40px 44px;
+      }
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 1.75rem;
+      line-height: 1.25;
+    }
+
+    .meta {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    h2 {
+      margin: 28px 0 10px;
+      font-size: 1.2rem;
+      line-height: 1.35;
+      scroll-margin-top: 20px;
+    }
+
+    p {
+      margin: 0 0 12px;
+      color: var(--text);
+    }
+
+    ul {
+      margin: 8px 0 14px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-word;
+    }
+
+    .callout {
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin: 14px 0;
+      font-size: 0.95rem;
+    }
+
+    .deletion-box {
+      background: var(--danger-bg);
+      border: 1px solid var(--danger-border);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 14px 0;
+    }
+
+    .deletion-box p:last-child,
+    .callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      margin-top: 32px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      font-size: 0.88rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px 16px;
+    }
   </style>
-  <meta name="google-site-verification" content="H07dcIkwDDgtu2VoyFXLIVr_kHpNl8RnY7YiUFz6JOU" />
 </head>
 <body>
-  <h1>Privacy Policy for WordBridge</h1>
-  <p><em>Last updated: August 23, 2026</em></p>
+  <main>
+    <header>
+      <span class="badge">WordBridge by AlizIQ</span>
+      <h1>Privacy Policy for WordBridge</h1>
+      <p class="meta">Last updated: November 20, 2026</p>
+    </header>
 
-  <p>WordBridge ("we", "our", "the app") respects your privacy. This policy explains what information we collect and how we use it.</p>
+    <p>
+      WordBridge ("we", "our", "the app"), developed by <strong>AlizIQ</strong>, respects your privacy.
+      This Privacy Policy explains what information we collect, how we use it, and the choices you have.
+    </p>
 
-  <h2>Information We Collect</h2>
-  <ul>
-    <li><strong>Account information:</strong> If you sign in, we collect your email address and/or Google account name to create your profile.</li>
-    <li><strong>Quiz and usage data:</strong> We store your quiz scores, languages studied, and progress to power features like the leaderboard and your personal stats.</li>
-    <li><strong>Purchase information:</strong> If you unlock premium content, purchase records are processed through Google Play Billing. We do not store your payment card details.</li>
-  </ul>
+    <h2>1. Information We Collect</h2>
+    <ul>
+      <li>
+        <strong>Account information:</strong> If you choose to sign in with Google, we collect your Google account name,
+        email address, profile photo URL, and Firebase User ID to create and manage your account.
+      </li>
+      <li>
+        <strong>Learning, quiz, and feature data:</strong> We store your learned words, Smart Review and mastery progress,
+        daily streaks, quiz scores, languages studied, referral and promo redemption status, and 1v1 battle match scores
+        to provide cloud sync, personal stats, and leaderboards.
+      </li>
+      <li>
+        <strong>User feedback and bug reports:</strong> If you submit feedback or a bug report in the app, we collect
+        the message and category you provide so we can investigate issues and improve the app.
+      </li>
+      <li>
+        <strong>Purchase information:</strong> If you purchase a subscription or lifetime pass, transactions are processed
+        through Google Play Billing. We store verified entitlement status and purchase tokens/order references to unlock
+        and restore your premium access. We do not collect or store your payment card details.
+      </li>
+      <li>
+        <strong>Diagnostics and analytics:</strong> We use Firebase Analytics and Firebase Crashlytics to collect app
+        interaction events, crash logs, and basic device/OS diagnostics to fix bugs and improve performance.
+      </li>
+    </ul>
 
-  <h2>How We Use Your Information</h2>
-  <ul>
-    <li>To save your learning progress across sessions</li>
-    <li>To display your scores on the public leaderboard (your chosen display name/username is visible to other users; your email is not)</li>
-    <li>To unlock premium features after purchase</li>
-  </ul>
+    <h2>2. How We Use Your Information</h2>
+    <ul>
+      <li>To save and sync your vocabulary, Smart Review, and learning progress across sessions and devices.</li>
+      <li>To display your chosen display name, avatar, and scores on the public leaderboard and in 1v1 battles (your email address is never shown publicly).</li>
+      <li>To verify, unlock, and restore premium purchases, referrals, and promotional access.</li>
+      <li>To deliver optional daily study reminder notifications if you enable them.</li>
+      <li>To monitor app stability, diagnose crashes, and improve features.</li>
+    </ul>
 
-  <h2>Data Sharing</h2>
-  <p>We do not sell your personal data. Limited data may be shared with service providers strictly to operate the app (e.g. Google Play Billing for payments, Firebase for account and score storage).</p>
+    <h2>3. Data Sharing and Service Providers</h2>
+    <p>
+      We do not sell your personal data. We share limited data only with trusted third-party infrastructure providers
+      strictly necessary to operate the app:
+    </p>
+    <ul>
+      <li>
+        <strong>Google Firebase</strong> (Authentication, Cloud Firestore, Cloud Functions, Analytics, and Crashlytics)
+        for sign-in, cloud storage, diagnostics, and analytics.
+      </li>
+      <li>
+        <strong>Google Play Billing</strong> for processing and verifying in-app purchases and subscriptions.
+      </li>
+    </ul>
 
-  <h2>Your Choices</h2>
-  <ul>
-    <li>You can use most features of the app without signing in.</li>
-    <li>You can request deletion of your account and associated data by contacting us at the email below, or using the "Delete my account" option in Settings.</li>
-  </ul>
+    <h2>4. Data Security and Retention</h2>
+    <p>
+      All data transmitted between the app and our servers is encrypted in transit using HTTPS/TLS.
+      We retain your account and cloud progress data for as long as your account remains active or as needed
+      to provide the service.
+    </p>
 
-  <h2>Children's Privacy</h2>
-  <p>WordBridge is not directed at children under 13, and we do not knowingly collect personal information from children under 13.</p>
+    <h2 id="account-deletion">5. Your Choices and Account Deletion</h2>
+    <ul>
+      <li>
+        <strong>Optional sign-in:</strong> You can use core learning features of WordBridge without signing in.
+      </li>
+      <li>
+        <strong>Notifications:</strong> You can enable or disable reminder notifications at any time inside the app
+        or in your Android device settings.
+      </li>
+    </ul>
 
-  <h2>Changes to This Policy</h2>
-  <p>We may update this policy from time to time. Continued use of the app after changes means you accept the updated policy.</p>
+    <div class="deletion-box">
+      <p>
+        <strong>Delete your account inside WordBridge:</strong> Open the <strong>Profile</strong> screen in WordBridge
+        and tap <strong>"Delete Account"</strong> to permanently delete your profile, leaderboard entry, cloud learning
+        and Smart Review progress, and local app data.
+      </p>
+      <p>
+        <strong>Request deletion outside the app:</strong> If you have uninstalled WordBridge or need assistance, email
+        us at
+        <a href="mailto:alizainalaza345@gmail.com?subject=Account%20Deletion%20Request%20-%20WordBridge">alizainalaza345@gmail.com</a>
+        with the subject <strong>"Account Deletion Request"</strong> from your registered email address. We will process
+        account deletion requests within <strong>7 days</strong>.
+      </p>
+    </div>
 
-  <h2>Contact Us</h2>
-  <p>If you have questions about this privacy policy, contact us at: <strong>alizainalaza345@gmail.com</strong></p>
+    <p>
+      <strong>Note on retained records:</strong> Certain minimal purchase verification/audit records or anonymized
+      aggregate statistics may be retained where required for billing verification, fraud prevention, or legal compliance.
+    </p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>
+      WordBridge is not directed at children under 13, and we do not knowingly collect personal information from
+      children under 13. If you believe a child under 13 has provided personal data, please contact us so we can
+      delete it promptly.
+    </p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. The updated version will be indicated by the "Last updated"
+      date at the top of this page. Continued use of the app after changes means you accept the updated policy.
+    </p>
+
+    <h2>8. Contact Us</h2>
+    <div class="callout">
+      <p>
+        If you have any questions about this Privacy Policy or your data, contact <strong>AlizIQ</strong> at:<br />
+        Email: <a href="mailto:alizainalaza345@gmail.com">alizainalaza345@gmail.com</a>
+      </p>
+    </div>
+
+    <footer>
+      <span>© 2026 AlizIQ — WordBridge</span>
+      <span><a href="terms.html">Terms of Service</a></span>
+    </footer>
+  </main>
 </body>
 </html>
